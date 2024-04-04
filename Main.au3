@@ -87,10 +87,7 @@ Func _iniciarJuego()
 		Local $existsExe = FileExists($pathIcarusGame)
 		If $existsExe Then
 			GUICtrlSetState($btnIniciarJuego, $GUI_DISABLE)
-			Local $iReturn = ShellExecuteWait($pathIcarusGame)
-			If $iReturn == 0 Then
-				GUICtrlSetState($btnIniciarJuego, $GUI_ENABLE)
-			EndIf
+			ShellExecute($pathIcarusGame)
 		Else
 			MsgBox(16, $app, "¡El archivo no existe!")
 			IniWrite($cfg,"GamePath","IcarusGamePath","")
