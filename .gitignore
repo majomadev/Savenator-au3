@@ -1,2 +1,5 @@
 *.exe
 tpl-markdown.txt
+/Saves
+/old_scripts
+cfg.ini
